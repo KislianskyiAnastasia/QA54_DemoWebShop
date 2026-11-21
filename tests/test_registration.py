@@ -1,10 +1,12 @@
+import os
+
 from pages.registration_page import RegistrationPage
 
 FIRST_NAME = "Anastasia"
 LAST_NAME = "Kisliy"
-VALID_EMAIL = "Kislianskyi@gmail.com"
-VALID_PASSWORD = "Zxczxc26!"
-CONFIRM_PASSWORD = "Zxczxc26!"
+VALID_EMAIL = os.getenv("VALID_EMAIL")
+VALID_PASSWORD = os.getenv("VALID_PASSWORD")
+CONFIRM_PASSWORD = "Zx6!"
 
 def test_registration_success(driver):
     registration_page = RegistrationPage(driver)
